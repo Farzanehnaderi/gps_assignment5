@@ -1,1 +1,147 @@
-"# gps_assignment5" 
+
+# 📡 RINEX C1C Analyzer (Assignment 5 - GPS)
+
+**Author:** Farzaneh Naderi  
+**Student ID:** 810301115  
+**University:** University of Tehran  
+**Course:** GPS  
+**Instructor:** Dr. Saeed Farzaneh  
+
+---
+
+## 🚀 Project Overview
+
+This project is part of Assignment 5 in the GPS course and focuses on **epoch-by-epoch extraction and visualization** of `C1C pseudorange` measurements from RINEX 3.02 observation files. The tool supports:
+
+- Header parsing for satellite and observation metadata  
+- Epoch-wise extraction of C1C values  
+- Data filtering and transformation into a structured DataFrame  
+- Interactive plotting of satellite pseudorange over time  
+- Exporting results into a clean CSV report  
+- A modern **PyQt5 GUI** for intuitive analysis
+
+> 📍 Focused exclusively on GPS satellites (`Gxx`) using `C1C` observation type.
+
+---
+
+## 🧠 Key Features
+
+✅ RINEX 3.02 compliant parser  
+✅ Automatic detection of `C1C` observation index  
+✅ Satellite-specific pseudorange tracking  
+✅ Clean, high-quality Matplotlib plots  
+✅ Interactive GUI with multi-satellite selection  
+✅ Dark-themed, responsive interface  
+✅ CSV export with epoch timestamps and measurements
+
+---
+
+## 🖼 GUI Interface
+
+
+| Panel | Function |
+|-------|----------|
+| 📂 File Browser | Select RINEX observation file |
+| 📋 Header Info | Shows version, obs types, C1C index |
+| 🛰 Satellite Panel | Select specific satellites or limit to first N |
+| 📈 Actions | Export data as CSV or visualize plots |
+| 📊 Plot Tab | Time-series plot of pseudorange values |
+| 💬 Console Tab | Log messages and errors |
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/Farzanehnaderi/gps_assignment5.git
+cd rinex-c1c-analyzer
+pip install -r requirement.txt
+````
+
+---
+
+## ▶️ Run the App
+
+```bash
+python GUI.py
+```
+
+For CLI-based usage and debugging, run:
+
+```bash
+python Observation_gps.py
+```
+
+---
+
+## 📂 Project Structure
+
+```plaintext
+📁 rinex-c1c-analyzer/
+│
+├── GUI.py                  # PyQt5 GUI Application
+├── Observation_gps.py      # Core logic: header parsing, observation extraction, plotting
+├── sample_file.24O         # Example RINEX 3.02 file (replace with actual)
+├── c1c_report.csv          # Sample output (generated)
+├── README.md               # This file!
+└── requirements.txt        # Python dependencies
+```
+
+---
+
+## 📊 Sample Output (CSV)
+
+| Epoch\_ID | Time                | Satellite | C1C\_m      |
+| --------- | ------------------- | --------- | ----------- |
+| 1         | 2024-01-01 00:00:00 | G01       | 20839842.12 |
+| 1         | 2024-01-01 00:00:00 | G02       | 21345673.44 |
+| ...       | ...                 | ...       | ...         |
+
+---
+
+## 🎨 Plot Preview
+
+* X-axis: UTC Time
+* Y-axis: Pseudorange in meters
+* Colored lines per satellite
+* Max value annotation for primary satellite
+
+---
+
+## 📚 Academic Context
+
+This application simulates a **space mission control scenario (SPOC)** where precise satellite measurements are required for navigation and position estimation. Only GPS satellites are used, and raw `C1C pseudorange` values are parsed directly from RINEX headers and observation records.
+
+---
+
+## 🛠 Technologies Used
+
+* `Python 3.10+`
+* `PyQt5` — GUI Framework
+* `matplotlib` — Scientific plotting
+* `pandas` — Data transformation
+* `datetime` — Time handling
+
+---
+
+## 🧪 Example Mission Use Case
+
+Imagine you're on a satellite control team receiving raw GPS data in RINEX format. This tool helps you:
+
+* Confirm data quality
+* Visualize satellite coverage and signal stability
+* Preprocess pseudorange for further position estimation
+
+---
+
+
+## 🙋‍♀️ Author
+
+Made with precision by **Farzaneh Naderi**
+📧 Email: `farzanehnaderi@ut.ac.ir`
+📍 GitHub: [@Farzanehnaderi](https://github.com/Farzanehnaderi)
+
+
+> 🛰️ *“In GPS, every meter counts — and now, every C1C too.”*
+
+
